@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATO - Инновация в мире ресторанов</title>
+    
+    <!-- SEO -->
+    <meta name="description" content="CATO — мгновенное бронирование столиков, автоматическая оплата и персональные рекомендации в лучших ресторанах города.">
+    <meta name="keywords" content="бронирование ресторанов, CATO, smart booking, рестораны Алматы, автоплата">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23ff4f00'/><text x='50' y='70' font-size='60' fill='white' text-anchor='middle' font-family='Arial'>C</text></svg>">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/logo.png" alt="CATO" class="nav-logo-img">
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#features" class="nav-link" data-translate="nav_features">Возможности</a>
+                <a href="#how" class="nav-link" data-translate="nav_how">Как работает</a>
+                <a href="#benefits" class="nav-link" data-translate="nav_benefits">Преимущества</a>
+                <a href="#download" class="nav-link" data-translate="nav_download">Скачать</a>
+                
+                <div class="lang-switch">
+                    <button class="lang-btn active" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="kk">ҚАЗ</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+            </div>
+            
+            <button class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <div class="hero-gradient"></div>
+            <canvas id="particles"></canvas>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-badge fade-up">
+                <i class="fas fa-sparkles"></i>
+                <span data-translate="badge">Скоро в App Store и Google Play</span>
+            </div>
+            
+            <h1 class="hero-title fade-up">
+                <span class="title-line" data-translate="hero_line1">Бронирование столиков</span>
+                <span class="title-line accent" data-translate="hero_line2">в один клик</span>
+            </h1>
+            
+            <p class="hero-description fade-up" data-translate="hero_desc">
+                CATO — это мгновенное бронирование столиков, автоматическая оплата и персональные рекомендации в лучших ресторанах города.
+            </p>
+            
+            <div class="hero-features fade-up">
+                <div class="hero-feature-pill">
+                    <i class="fas fa-bolt"></i>
+                    <span>3 секунды на бронь</span>
+                </div>
+                <div class="hero-feature-pill">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Автооплата</span>
+                </div>
+                <div class="hero-feature-pill">
+                    <i class="fas fa-sparkles"></i>
+                    <span>ИИ-рекомендации</span>
+                </div>
+            </div>
+            
+            <div class="hero-cta fade-up">
+                <button class="btn btn-primary btn-glow">
+                    <i class="fas fa-bell"></i>
+                    <span data-translate="btn_notify">Уведомить о запуске</span>
+                </button>
+            </div>
+            
+            <div class="hero-stats fade-up">
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label" data-translate="stat_restaurants">Ресторанов</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">5K+</div>
+                    <div class="stat-label" data-translate="stat_users">В листе ожидания</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">4.9</div>
+                    <div class="stat-label" data-translate="stat_rating">Рейтинг</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span data-translate="scroll">Листайте вниз</span>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal" data-translate="benefits_title">
+                    Почему CATO?
+                </h2>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3 data-translate="benefit1_title">Экономьте время</h3>
+                    <p data-translate="benefit1_desc">Среднее бронирование по телефону занимает 8 минут. С CATO — 3 секунды.</p>
+                </div>
+                
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-translate="benefit2_title">Гарантия места</h3>
+                    <p data-translate="benefit2_desc">Выберите дату, время и количество гостей и бронируйте в пару кликов.</p>
+                </div>
+                
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 data-translate="benefit3_title">Всё в одном приложении</h3>
+                    <p data-translate="benefit3_desc">Поиск, бронирование, меню, оплата, отзывы — всё в одном месте.</p>
+                </div>
+                
+                <div class="benefit-card reveal">
+                    <div class="benefit-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 data-translate="benefit4_title">Умные рекомендации</h3>
+                    <p data-translate="benefit4_desc">ИИ узнаёт ваши предпочтения и предлагает идеальные места для вас.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal" data-translate="social_title">
+                    Уже в CATO
+                </h2>
+            </div>
+            
+            <div class="partners-slider">
+                <div class="partners-track">
+                    <div class="partner-logo">NOBU</div>
+                    <div class="partner-logo">ZUMA</div>
+                    <div class="partner-logo">CIPRIANI</div>
+                    <div class="partner-logo">HAKKASAN</div>
+                    <div class="partner-logo">NOVIKOV</div>
+                    <div class="partner-logo">SEXY FISH</div>
+                    <div class="partner-logo">AMAZONICO</div>
+                    <div class="partner-logo">NUSR-ET</div>
+                    <!-- Duplicate for seamless loop -->
+                    <div class="partner-logo">NOBU</div>
+                    <div class="partner-logo">ZUMA</div>
+                    <div class="partner-logo">CIPRIANI</div>
+                    <div class="partner-logo">HAKKASAN</div>
+                    <div class="partner-logo">NOVIKOV</div>
+                    <div class="partner-logo">SEXY FISH</div>
+                    <div class="partner-logo">AMAZONICO</div>
+                    <div class="partner-logo">NUSR-ET</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown-section" id="countdown">
+        <div class="container">
+            <div class="countdown-inner reveal">
+                <div class="countdown-badge">
+                    <i class="fas fa-rocket"></i>
+                    <span data-translate="countdown_badge">Официальный запуск</span>
+                </div>
+                <h2 class="countdown-title" data-translate="countdown_title">До запуска CATO осталось</h2>
+                <div class="countdown-timer">
+                    <div class="countdown-unit">
+                        <div class="countdown-number" id="days">00</div>
+                        <div class="countdown-label" data-translate="days">Дней</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-unit">
+                        <div class="countdown-number" id="hours">00</div>
+                        <div class="countdown-label" data-translate="hours">Часов</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-unit">
+                        <div class="countdown-number" id="minutes">00</div>
+                        <div class="countdown-label" data-translate="minutes">Минут</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-unit">
+                        <div class="countdown-number" id="seconds">00</div>
+                        <div class="countdown-label" data-translate="seconds">Секунд</div>
+                    </div>
+                </div>
+                <p class="countdown-sub" data-translate="countdown_sub">Первые 1000 пользователей получат Premium доступ бесплатно на 3 месяца</p>
+                <div class="countdown-progress-wrap">
+                    <div class="countdown-progress-labels">
+                        <span data-translate="waitlist_count">2 247 человек уже в листе ожидания</span>
+                        <span data-translate="waitlist_goal">Цель: 10 000</span>
+                    </div>
+                    <div class="countdown-progress-bar">
+                        <div class="countdown-progress-fill" style="width: 22.47%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal" data-translate="testimonials_title">Что говорят первые пользователи</h2>
+                <p class="section-subtitle reveal" data-translate="testimonials_subtitle">Мнения тех, кто уже попробовал CATO в бета-тестировании</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card reveal" data-delay="0">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text" data-translate="t1_text">Бронировал столик в Zuma за 2 минуты, включая выбор места. Раньше это занимало полчаса звонков. Это реально другой уровень.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">А</div>
+                        <div class="author-info">
+                            <div class="author-name">Алихан М.</div>
+                            <div class="author-role" data-translate="t1_role">Бета-тестировщик · Алматы</div>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal featured" data-delay="100">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text" data-translate="t2_text">Функция "просто уйди" — это магия. Поужинали с семьёй, встали и ушли. Всё оплатилось само. Дети думали, что мы VIP клиенты.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">С</div>
+                        <div class="author-info">
+                            <div class="author-name">Сауле Б.</div>
+                            <div class="author-role" data-translate="t2_role">Бета-тестировщик · Алматы</div>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card reveal" data-delay="200">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text" data-translate="t3_text">AI-рекомендации реально работают. Предложил мне новый ресторан — я бы сам никогда не нашёл. Теперь хожу туда каждую неделю.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">Д</div>
+                        <div class="author-info">
+                            <div class="author-name">Данияр К.</div>
+                            <div class="author-role" data-translate="t3_role">Бета-тестировщик · Алматы</div>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal" data-translate="faq_title">Часто задаваемые вопросы</h2>
+                <p class="section-subtitle reveal" data-translate="faq_subtitle">Ответы на всё, что вас интересует</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item reveal" data-delay="0">
+                    <button class="faq-question">
+                        <span data-translate="faq1_q">Когда приложение будет доступно?</span>
+                        <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-translate="faq1_a">Запуск планируется в середине 2026 года. Подпишитесь на уведомления, чтобы получить приглашение в первую очередь и эксклюзивные бонусы при старте.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-delay="50">
+                    <button class="faq-question">
+                        <span data-translate="faq2_q">Сколько стоит бронирование?</span>
+                        <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-translate="faq2_a">Бронирование через CATO бесплатное.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-delay="100">
+                    <button class="faq-question">
+                        <span data-translate="faq3_q">Как я узнаю, что бронь подтверждена?</span>
+                        <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-translate="faq3_a">Сразу после бронирования вы получите подтверждение в приложении и уведомление. Если ресторан не сможет принять бронь — мы тут же предложим альтернативу.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-delay="150">
+                    <button class="faq-question">
+                        <span data-translate="faq4_q">Можно ли отменить или перенести бронирование?</span>
+                        <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-translate="faq4_a">Да, бронь можно отменить или изменить прямо в приложении. Рекомендуем сделать это заранее, чтобы ресторан успел освободить столик для других гостей.</p>
+                    </div>
+                </div>
+                <div class="faq-item reveal" data-delay="200">
+                    <button class="faq-question">
+                        <span data-translate="faq5_q">Что если я опаздываю?</span>
+                        <div class="faq-icon"><i class="fas fa-plus"></i></div>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-translate="faq5_a">Свяжитесь с рестораном через приложение — большинство заведений держат столик 15–20 минут. Если опоздание больше — лучше предупредить заранее.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="download">
+        <div class="container">
+            <div class="cta-content reveal">
+                <h2 class="cta-title" data-translate="cta_title">
+                    Готовы к новому опыту?
+                </h2>
+                <p class="cta-text" data-translate="cta_text">
+                    Присоединяйтесь к листу ожидания и получите бонусы при запуске.
+                </p>
+                
+                <form class="cta-form" id="emailForm">
+                    <div class="form-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="your@email.com" required data-translate-placeholder="email_placeholder">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-glow">
+                        <span data-translate="btn_join">Присоединиться</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+                
+                <div class="cta-badges">
+                    <div class="app-badge">
+                        <i class="fab fa-apple"></i>
+                        <div>
+                            <small data-translate="badge_soon">Скоро в</small>
+                            <strong>App Store</strong>
+                        </div>
+                    </div>
+                    <div class="app-badge">
+                        <i class="fab fa-google-play"></i>
+                        <div>
+                            <small data-translate="badge_soon">Скоро в</small>
+                            <strong>Google Play</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <img src="assets/logo.png" alt="CATO" class="nav-logo-img">
+                    </div>
+                    <p data-translate="footer_tagline">Инновация в мире ресторанов.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 data-translate="footer_product">Продукт</h4>
+                        <a href="#features" data-translate="footer_features">Возможности</a>
+                        <a href="#how" data-translate="footer_how">Как работает</a>
+                        <a href="#" data-translate="footer_pricing">Цены</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 data-translate="footer_company">Компания</h4>
+                        <a href="#" data-translate="footer_about">О нас</a>
+                        <a href="#" data-translate="footer_careers">Карьера</a>
+                        <a href="#" data-translate="footer_contact">Контакты</a>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4 data-translate="footer_legal">Правовая информация</h4>
+                        <a href="#" data-translate="footer_privacy">Конфиденциальность</a>
+                        <a href="#" data-translate="footer_terms">Условия использования</a>
+                        <a href="#" data-translate="footer_cookies">Cookies</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 CATO Inc. <span data-translate="footer_rights">Все права защищены</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 data-translate="modal_title">Отлично!</h3>
+            <p data-translate="modal_message">
+                Вы в списке! Мы отправим вам приглашение как только запустим приложение.
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
