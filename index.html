@@ -15,7 +15,13 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <style>
+      /* Kazakh font override — Playfair Display has no Cyrillic support */
+      [lang="kk"] {
+        --font-display: 'Noto Serif', serif;
+      }
+    </style>
     
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -80,15 +86,15 @@
             <div class="hero-features fade-up">
                 <div class="hero-feature-pill">
                     <i class="fas fa-bolt"></i>
-                    <span>3 секунды на бронь</span>
+                    <span data-translate="hero_pill_booking">3 секунды на бронь</span>
                 </div>
                 <div class="hero-feature-pill">
                     <i class="fas fa-credit-card"></i>
-                    <span>Автооплата</span>
+                    <span data-translate="hero_pill_autopay">Автооплата</span>
                 </div>
                 <div class="hero-feature-pill">
                     <i class="fas fa-sparkles"></i>
-                    <span>ИИ-рекомендации</span>
+                    <span data-translate="hero_pill_ai">🧠 ИИ-рекомендации</span>
                 </div>
             </div>
             
@@ -231,7 +237,6 @@
                         <div class="countdown-label" data-translate="seconds">Секунд</div>
                     </div>
                 </div>
-                <p class="countdown-sub" data-translate="countdown_sub">Первые 1000 пользователей получат Premium доступ бесплатно на 3 месяца</p>
                 <div class="countdown-progress-wrap">
                     <div class="countdown-progress-labels">
                         <span data-translate="waitlist_count">2 247 человек уже в листе ожидания</span>
@@ -420,7 +425,6 @@
                         <h4 data-translate="footer_product">Продукт</h4>
                         <a href="#features" data-translate="footer_features">Возможности</a>
                         <a href="#how" data-translate="footer_how">Как работает</a>
-                        <a href="#" data-translate="footer_pricing">Цены</a>
                     </div>
                     
                     <div class="footer-column">

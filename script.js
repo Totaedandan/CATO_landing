@@ -58,6 +58,9 @@ const translations = {
     email_placeholder: "ваш@email.com",
     btn_join: "Присоединиться",
     badge_soon: "Скоро в",
+    hero_pill_booking: "3 секунды на бронь",
+    hero_pill_autopay: "Автооплата",
+    hero_pill_ai: "🧠 ИИ-рекомендации",
     footer_tagline: "Инновация в мире ресторанов.",
     footer_product: "Продукт",
     footer_features: "Возможности",
@@ -80,7 +83,6 @@ const translations = {
     hours: "Часов",
     minutes: "Минут",
     seconds: "Секунд",
-    countdown_sub: "Первые 1000 пользователей получат Premium доступ бесплатно на 3 месяца",
     waitlist_count: "2 247 человек уже в листе ожидания",
     waitlist_goal: "Цель: 10 000",
     testimonials_title: "Что говорят первые пользователи",
@@ -162,6 +164,9 @@ const translations = {
     email_placeholder: "сіздің@email.com",
     btn_join: "Қосылу",
     badge_soon: "Жақында",
+    hero_pill_booking: "3 секундта броньдау",
+    hero_pill_autopay: "Автотөлем",
+    hero_pill_ai: "🧠 ЖИ-ұсыныстар",
     footer_tagline: "Мейрамханалар әлеміндегі инновация.",
     footer_product: "Өнім",
     footer_features: "Мүмкіндіктер",
@@ -184,7 +189,6 @@ const translations = {
     hours: "Сағат",
     minutes: "Минут",
     seconds: "Секунд",
-    countdown_sub: "Алғашқы 1000 пайдаланушы 3 айға тегін Premium қолжетімділік алады",
     waitlist_count: "2 247 адам күту тізімінде",
     waitlist_goal: "Мақсат: 10 000",
     testimonials_title: "Алғашқы пайдаланушылар не дейді",
@@ -213,7 +217,7 @@ const translations = {
     nav_how: "How It Works",
     nav_benefits: "Why CATO",
     nav_download: "Download",
-    badge: "Coming soon to App Store & Google Play",
+    badge: "Coming soon in App Store & Google Play",
     hero_line1: "Book a Table",
     hero_line2: "in One Tap",
     hero_desc: "CATO is instant table reservations, seamless in-app payment, and AI-powered recommendations at the best restaurants in the city.",
@@ -265,7 +269,10 @@ const translations = {
     cta_text: "Join the waitlist and unlock exclusive bonuses when we launch.",
     email_placeholder: "your@email.com",
     btn_join: "Join the Waitlist",
-    badge_soon: "Coming Soon —",
+    badge_soon: "Coming soon in",
+    hero_pill_booking: "Book in 3 Seconds",
+    hero_pill_autopay: "Autopay",
+    hero_pill_ai: "🧠 AI Recommendations",
     footer_tagline: "Innovation in the restaurant world.",
     footer_product: "Product",
     footer_features: "Features",
@@ -288,7 +295,6 @@ const translations = {
     hours: "Hours",
     minutes: "Minutes",
     seconds: "Seconds",
-    countdown_sub: "First 1000 users get Premium access free for 3 months",
     waitlist_count: "2,247 people already on the waitlist",
     waitlist_goal: "Goal: 10,000",
     testimonials_title: "What our first users say",
@@ -542,10 +548,6 @@ function initForm() {
       
       modal.classList.add('show');
       form.reset();
-      
-      setTimeout(() => {
-        modal.classList.remove('show');
-      }, 3000);
     });
   }
   
