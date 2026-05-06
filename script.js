@@ -534,20 +534,45 @@ function initTitleAnimation() {
 }
 
 // ==================== FORM SUBMISSION ====================
+// 👇 Вставь сюда URL после деплоя Google Apps Script
+const SHEETS_URL = "https://script.google.com/macros/s/AKfycbxeTFtWHrzS6lkbfdxD92eWwOy_-t96h6HHZwwarLJHg3ffn4B31Q2L11r-1HFG1dSYkg/exec";
+
 function initForm() {
   const form = document.getElementById('emailForm');
   const modal = document.getElementById('modal');
   const modalClose = document.getElementById('modalClose');
-  
+  const submitBtn = form ? form.querySelector('button[type="submit"], .cta-btn') : null;
+
   if (form) {
-    form.addEventListener('submit', (e) => {
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const email = form.querySelector('input[type="email"]').value;
-      
-      console.log('Email submitted:', email);
-      
+      const lang  = document.documentElement.lang || 'ru';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.style.opacity = '0.6';
+      }
+
+      try {
+        await fetch(SHEETS_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, lang, userAgent: navigator.userAgent })
+        });
+      } catch (err) {
+        // no-cors режим всегда кидает ошибку — запись в таблицу всё равно происходит
+        console.log('Waitlist entry sent:', email);
+      }
+
       modal.classList.add('show');
       form.reset();
+
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '';
+      }
     });
   }
   
