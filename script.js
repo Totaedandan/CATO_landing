@@ -1,9 +1,9 @@
 // ==================== TRANSLATIONS ====================
 const translations = {
   ru: {
-    nav_features: "Возможности",
-    nav_how: "Как работает",
-    nav_benefits: "Преимущества",
+    nav_features: "Почему CATO?",
+    nav_how: "Отзывы",
+    nav_benefits: "FAQ",
     nav_download: "Скачать",
     badge: "Скоро в App Store и Google Play",
     hero_line1: "Бронирование столиков",
@@ -107,9 +107,9 @@ const translations = {
     faq5_a: "Свяжитесь с рестораном через приложение — большинство заведений держат столик 15–20 минут. Если опоздание больше — лучше предупредить заранее."
   },
   kk: {
-    nav_features: "Мүмкіндіктер",
-    nav_how: "Қалай жұмыс істейді",
-    nav_benefits: "Артықшылықтары",
+    nav_features: "Неге CATO?",
+    nav_how: "Пікірлер",
+    nav_benefits: "FAQ",
     nav_download: "Жүктеп алу",
     badge: "Жақында App Store және Google Play-де",
     hero_line1: "Үстел брондау",
@@ -213,9 +213,9 @@ const translations = {
     faq5_a: "Қолданба арқылы мейрамханамен байланысыңыз — көптеген мекемелер үстелді 15–20 минут ұстайды. Егер кешігу одан да көп болса — алдын ала ескерту жөн."
   },
   en: {
-    nav_features: "Features",
-    nav_how: "How It Works",
-    nav_benefits: "Why CATO",
+    nav_features: "Why CATO?",
+    nav_how: "Reviews",
+    nav_benefits: "FAQ",
     nav_download: "Download",
     badge: "Coming soon in App Store & Google Play",
     hero_line1: "Book a Table",

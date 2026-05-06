@@ -15,11 +15,20 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Golos+Text:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-      /* Kazakh font override — Playfair Display has no Cyrillic support */
-      [lang="kk"] {
-        --font-display: 'Noto Serif', serif;
+      /* Kazakh font override — Playfair Display has no Cyrillic/Kazakh support */
+      html[lang="kk"] {
+        --font-display: 'Golos Text', sans-serif;
+        --font-body: 'Golos Text', sans-serif;
+      }
+      html[lang="kk"] h1,
+      html[lang="kk"] h2,
+      html[lang="kk"] h3,
+      html[lang="kk"] .cta-title,
+      html[lang="kk"] .section-title,
+      html[lang="kk"] .title-line {
+        font-family: 'Golos Text', sans-serif !important;
       }
     </style>
     
@@ -41,9 +50,9 @@
             </div>
             
             <div class="nav-menu" id="navMenu">
-                <a href="#features" class="nav-link" data-translate="nav_features">Возможности</a>
-                <a href="#how" class="nav-link" data-translate="nav_how">Как работает</a>
-                <a href="#benefits" class="nav-link" data-translate="nav_benefits">Преимущества</a>
+                <a href="#benefits" class="nav-link" data-translate="nav_features">Почему CATO?</a>
+                <a href="#testimonials" class="nav-link" data-translate="nav_how">Отзывы</a>
+                <a href="#faq" class="nav-link" data-translate="nav_benefits">FAQ</a>
                 <a href="#download" class="nav-link" data-translate="nav_download">Скачать</a>
                 
                 <div class="lang-switch">
