@@ -527,6 +527,20 @@ body:hover .cursor {
   box-shadow: 0 15px 40px rgba(255, 79, 0, 0.4);
 }
 
+.btn-join {
+  background: white;
+  color: var(--primary);
+  box-shadow: 0 10px 30px rgba(255, 79, 0, 0.25);
+  font-weight: 700;
+}
+
+.btn-join:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(255, 79, 0, 0.35);
+  background: white;
+  color: var(--primary);
+}
+
 .btn-glow {
   position: relative;
   overflow: hidden;
